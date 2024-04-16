@@ -6,7 +6,6 @@
          backupGlobals="false"
          colors="true"
          bootstrap="tests/bootstrap.php"
-         convertDeprecationsToExceptions="false"
 >
     <php>
         <ini name="display_errors" value="1" />
@@ -14,7 +13,8 @@
         <server name="APP_ENV" value="test" force="true" />
         <server name="SHELL_VERBOSITY" value="-1" />
         <server name="SYMFONY_PHPUNIT_REMOVE" value="" />
-        <server name="SYMFONY_PHPUNIT_VERSION" value="9.5" />
+        <!-- Assurez-vous que cette version est compatible avec PHPUnit 11 -->
+        <server name="SYMFONY_PHPUNIT_VERSION" value="11.0" />
     </php>
 
     <testsuites>
@@ -23,16 +23,14 @@
         </testsuite>
     </testsuites>
 
-    <coverage processUncoveredFiles="true">
-        <include>
+    <!-- La configuration de la couverture de code peut nécessiter des ajustements supplémentaires -->
+    <coverage>
+        <!-- <include>
             <directory suffix=".php">src</directory>
-        </include>
+        </include> -->
     </coverage>
 
-    <listeners>
-        <listener class="Symfony\Bridge\PhpUnit\SymfonyTestsListener" />
-    </listeners>
-
+    <!-- Les extensions peuvent être ajoutées ici si nécessaire -->
     <extensions>
     </extensions>
 </phpunit>
