@@ -21,7 +21,7 @@ jobs:
     #  To automatically get bug fixes and new Php versions for shivammathur/setup-php,
     # change this to (see https://github.com/shivammathur/setup-php#bookmark-versioning):
     # uses: shivammathur/setup-php@v2
-    - uses: shivammathur/setup-php@efffd0e4f2504f936fcfe3b69293d31ce0e2fd7a
+    - uses: shivammathur/setup-php@c665c7a15b5295c2488ac8a87af9cb806cd72198
       with:
         php-version: '8.3'
     - uses: actions/checkout@v3
